@@ -1,8 +1,6 @@
 #config/shell/ Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-#
-clear
 
 POWERLEVEL9K_CONFIG_FILE=$HOME/.config/shell/p10k.zsh
 
@@ -104,8 +102,9 @@ source ~/.aliases.zsh
 
 ### ============================= OTHER ============================= ###
 #
-[ -f ~/.config/fzf/fzf.zsh ] && source ~/.config/fzf/fzf.zsh
-# source ~/.zshplugins/fzf-tab/fzf-tab.plugin.zsh
+# [ -f ~/.config/fzf/fzf.zsh ] && source ~/.config/fzf/fzf.zsh
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
+source ~/.local/share/shell/fzf-tab/fzf-tab.plugin.zsh
 
 
 bindkey -e
@@ -114,20 +113,14 @@ bindkey '^ ' autosuggest-accept
 source $HOME/.local/share/shell/p10k/powerlevel10k.zsh-theme
 eval "$(zoxide init zsh)"
 
-
 source $HOME/.local/share/shell/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.local/share/shell/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# autoload edit-command-line; zle -N edit-command-line
-# bindkey '^xe' edit-command-line
-# bindkey '^x^e' edit-command-line
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/shell/p10k.zsh ]] || source ~/.config/shell/p10k.zsh
 
-# for al in `git --list-cmds=alias`; do
-#     alias g$al="git $al"
-# done
+for al in `git --list-cmds=alias`; do
+    alias g$al="git $al"
+done
 
 
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh

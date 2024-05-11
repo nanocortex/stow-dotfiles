@@ -103,8 +103,8 @@ export LANG=en_US.UTF-8
 source ~/.aliases.zsh
 
 ### ============================= OTHER ============================= ###
-
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#
+[ -f ~/.config/fzf/fzf.zsh ] && source ~/.config/fzf/fzf.zsh
 # source ~/.zshplugins/fzf-tab/fzf-tab.plugin.zsh
 
 
@@ -129,3 +129,5 @@ source $HOME/.local/share/shell/zsh-syntax-highlighting/zsh-syntax-highlighting.
 #     alias g$al="git $al"
 # done
 
+
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh

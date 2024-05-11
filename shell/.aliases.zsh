@@ -7,20 +7,15 @@ alias zrc='vim ~/.zshrc; source ~/.zshrc'
 alias 10rc='vim ~/.p10k.zsh; source ~/.zshrc'
 alias als="vim ~/.aliases.zsh; source ~/.zshrc"
 alias vrc='vim ~/.config/lvim/config.lua'
-alias trc='vim ~/.taskrc'
 alias sshc="vim $HOME/.ssh/config"
 
 
 alias lg='lazygit'
 alias v='vim'
 alias brclr="git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
-alias m='mpv --no-video'
-alias y='youtube-dl'
-alias jrnl=' jrnl'
 alias mv='mv -vi'
 alias cp='cp -vir'
 alias mkdir='mkdir -pv'
-alias sql='psql -U postgres'
 alias n='nfunc -e'
 
 _fdvim() { 

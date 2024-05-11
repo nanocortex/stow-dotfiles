@@ -16,7 +16,6 @@ fi
 # Define a custom file for compdump
 export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump-$HOST-$ZSH_VERSION"
 
-
 ### ============================= CONFIGURATION ============================= ###
 zle -N edit-command-line
 bindkey '^[[111;14u' edit-command-line
@@ -76,19 +75,6 @@ export NNN_FIFO='/tmp/nnn.fifo'
 
 ### ============================= EXPORTS ============================= ###
 
-BLK="09"
-CHR="09"
-DIR="06"
-EXEC="09"
-FILE="06"
-MULTIHARDLINK="0A"
-LINK="0A"
-MISSING="09" # Not sure what this is
-ORPHAN="09"
-FIFO="09"
-SOCK="09"
-OTHER="09"
-
 export LANG=en_US.UTF-8
 export EDITOR='lvim'
 export VISUAL='lvim'
@@ -96,7 +82,6 @@ export PAGER='less -R'
 export TERM="xterm-256color"
 export COLORTERM=xterm-256color
 export LANG=en_US.UTF-8
-
 
 source ~/.aliases.zsh
 

@@ -82,6 +82,7 @@ export PAGER='less -R'
 export TERM="xterm-256color"
 export COLORTERM=xterm-256color
 export LANG=en_US.UTF-8
+export DOCKER_DATA_DIR="/var/lib/docker-data/"
 
 source ~/.aliases.zsh
 

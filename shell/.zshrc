@@ -76,8 +76,8 @@ export NNN_FIFO='/tmp/nnn.fifo'
 ### ============================= EXPORTS ============================= ###
 
 export LANG=en_US.UTF-8
-export EDITOR='lvim'
-export VISUAL='lvim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less -R'
 export TERM="xterm-256color"
 export COLORTERM=xterm-256color
@@ -110,3 +110,5 @@ for al in `git --list-cmds=alias`; do
 done
 
 
+
+source .secrets
